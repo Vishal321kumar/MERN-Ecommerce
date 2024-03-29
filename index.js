@@ -2,7 +2,7 @@ require('dotenv').config()
 const express = require('express')
 const server = express();
 const mongoose = require('mongoose');
-const { createProduct } = require('./controller/product');
+const { createProduct } = require('./controller/Product');
 const productsRouter = require('./routes/Products')
 const brandsRouter = require('./routes/Brands')
 const categoriesRouter = require('./routes/Categories')
@@ -264,5 +264,5 @@ async function main(){
 // server.post('/products',createProduct)
 
 server.listen(process.env.PORT,()=>{
-    console.log('server started')
+    console.log('server started') 
 })
